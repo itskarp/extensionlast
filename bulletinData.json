@@ -1,0 +1,86 @@
+{
+    "ISBA_Requirements": {
+      "Lower_Division_Requirements": {
+        "total_credits": 27,
+        "courses": [
+          { "code": "BCOR 1910", "title": "Business for Good", "credits": 2, "category": null, "prerequisites": [], "Core": [] },
+          { "code": "BCOR 2110", "title": "Financial Accounting", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 1910" }, { "anyOf": ["MATH 112", "MATH 120", "MATH 131"] }], "Core": [] },
+          { "code": "BCOR 2120", "title": "Accounting Information for Decision Making", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 2110" }, { "anyOf": ["MATH 112", "MATH 120", "MATH 131"] }], "Core": ["Flag: Information Literacy"] },
+          { "code": "BCOR 2210", "title": "Legal Environment of Business", "credits": 2, "category": null, "prerequisites": [{ "required": "BCOR 1910" }], "Core": [] },
+          { "code": "BCOR 2710", "title": "Business Information Technology", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 2110" }], "Core": [] },
+          { "code": "ECON 1050", "title": "Introductory Economics", "credits": 4, "category": null, "prerequisites": [], "Core": [] },
+          { "code": "ECON 2300", "title": "Introductory Statistics", "credits": 4, "category": null, "prerequisites": [], "Core": [] },
+          { "code": "MATH 112", "title": "Calculus for Business", "credits": 3, "category": null, "prerequisites": [], "Core": [] }
+        ]
+      },
+      "Upper_Division_Requirements": {
+        "total_credits": 28,
+        "courses": [
+          { "code": "BCOR 3410", "title": "Fundamentals of Finance", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 2110" }, { "anyOf": ["ECON 1050", { "allOf": ["ECON 1100", "ECON 1200"] }] }, { "anyOf": ["ECON 2300", "ECON 2350", "MATH 104"] }, { "anyOf": ["MATH 112", "MATH 131"] }], "Core": [] },
+          { "code": "BCOR 3510", "title": "Marketing and Business Communications", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 1910" }, { "anyOf": ["ECON 1050", { "allOf": ["ECON 1100", "ECON 1200"] }] }], "Core": [] },
+          { "code": "BCOR 3610", "title": "Managing People and Organizations", "credits": 4, "category": null, "prerequisites": [{ "required": "BCOR 1910" }], "Core": ["Flag: Engaged Learning"] },
+          { "code": "BCOR 4910", "title": "Business Ethics and Sustainability", "credits": 4, "category": null, "prerequisites": [{ "allOf": ["BCOR 2710", "BCOR 3410", "BCOR 3510", "BCOR 3610"] }], "Core": ["Integrations: Ethics and Justice", "Flag: Writing"] },
+          { "code": "BCOR 3750", "title": "Analytics in Operations and Supply Chain Management", "credits": 4, "category": "Quantitative Methods for Business", "prerequisites": [{ "anyOf": ["ACCT 3140", "BCOR 2710", "BCOR 2720"] }, { "anyOf": ["ECON 2300", "MATH 104"] }, { "required": "MATH 112" }], "Core": ["Flag: Quantitative Reasoning"] },
+          { "code": "BCOR 3860", "title": "International Business", "credits": 4, "category": "International/Global Awareness", "prerequisites": [{ "anyOf": ["ECON 1050", { "allOf": ["ECON 1100", "ECON 1200"] }] }], "Core": [] },
+          { "code": "BCOR 4970", "title": "Strategic Management", "credits": 4, "category": "Strategic Business Integrations", "prerequisites": [{ "allOf": ["BCOR 3410", "BCOR 3510", "BCOR 3610"] }], "Core": [] }
+        ]
+      },
+      "ISBA_Major_Requirements": {
+        "total_credits": 28,
+        "required_courses": [
+          { "code": "ISBA 3710", "title": "Database Management Systems", "credits": 4, "category": null, "prerequisites": [{ "anyOf": ["AIMS 2710", "BCOR 2710", "ACCT 3140"] }], "Core": [] },
+          { "code": "ISBA 4797", "title": "Capstone Project", "credits": 4, "category": null, "prerequisites": [{ "allOf": [{ "required": "ISBA 3710" }, { "required": "ISBA 3750" }, { "anyOf": ["ISBA 3730", "CMSI 1010"] }, { "anyOf": ["ISBA 3720", "ISBA 4796"] }] }, { "waivableIf": "ISBA 4796" }], "Core": [] },
+          {
+            "anyOf": [
+              {
+                "code": "ISBA 3720",
+                "title": "Systems Analysis and Design",
+                "credits": 4,
+                "category": "Elective or Major Requirement",
+                "prerequisites": [{ "anyOf": ["AIMS 2710", "BCOR 2710"] }],
+                "Core": []
+              },
+              {
+                "code": "ISBA 4796",
+                "title": "Capstone Proposal Development",
+                "credits": 1,
+                "category": "Elective or Major Requirement",
+                "prerequisites": [{ "required": "BCOR 2710" }],
+                "Core": []
+              }
+            ]
+          }
+        ],
+        "elective_courses": {
+          "minimum_required": 3,
+          "credits_per_course": 4,
+          "options": [
+            { "code": "ISBA 3730", "title": "Programming for Business Applications", "category": "Elective", "prerequisites": [{ "required": "BCOR 2710" }], "Core": [] },
+            { "code": "ISBA 4715", "title": "Developing Business Applications Using SQL", "category": "Elective", "prerequisites": [{ "anyOf": ["AIMS 3710", "ISBA 3710"] }], "Core": [] },
+            { "code": "ISBA 4740", "title": "Financial Modeling and Analytics", "category": "Elective", "prerequisites": [{ "required": "BCOR 3750" }, { "anyOf": ["BCOR 3410", "FNCE 3400"] }], "Core": [] },
+            { "code": "ISBA 4750", "title": "Business Web and App Development", "category": "Elective", "prerequisites": [{ "required": "ISBA 3710" }], "Core": [] },
+            { "code": "ISBA 4755", "title": "Introduction to Big Data", "category": "Elective", "prerequisites": [{ "required": "BCOR 2710" }, { "anyOf": ["AIMS 3730", "CMSI 1010"] }], "Core": [] },
+            { "code": "ISBA 4760", "title": "Data Visualization and GIS", "category": "Elective", "prerequisites": [{ "required": "BCOR 2710" }], "Core": [] },
+            { "code": "ISBA 4770", "title": "Cybersecurity", "category": "Elective", "prerequisites": [{ "required": "BCOR 2710" }], "Core": [] },
+            { "code": "ISBA 4775", "title": "Network Cloud Computing", "category": "Elective", "prerequisites": [], "Core": [] },
+            { "code": "ISBA 4790", "title": "Machine Learning", "category": "Elective", "prerequisites": [{ "required": "BCOR 2710" }, { "required": "BCOR 3750" }, { "anyOf": ["ISBA 3730", "CMSI 1010"] }], "Core": [] },
+            { "code": "ISBA 4798", "title": "Special Studies", "category": "Elective", "prerequisites": [], "Core": [] },
+            { "code": "ISBA 4799", "title": "Independent Studies", "category": "Elective", "prerequisites": [], "Core": [] }
+          ]
+        }
+      },
+      "Additional_Requirements": {
+        "final_hours_at_LMU": 30,
+        "upper_division_hours": 45,
+        "minimum_overall_gpa": 2.0,
+        "major_hours": 71,
+        "description": [
+          "30 of the last 36 semester hours must be completed at LMU.",
+          "A minimum of 45 upper-division semester hours is required.",
+          "A minimum overall GPA of 2.0 is required.",
+          "A minimum of 71 semester hours are required in the major (BCOR and ISBA courses)."
+        ]
+      }
+    }
+  }
+  
